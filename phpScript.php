@@ -21,17 +21,27 @@ if($number_of_rows==0){
     echo "Submit an URL to update the Information <br>";
 }
 
-
+function startsWith ($string, $startString) 
+{ 
+    $len = strlen($startString); 
+    return (substr($string, 0, $len) === $startString); 
+} 
+  
+// Main function 
+if (startsWith($url, "https://")) {
 for ($i=0;$i<1;$i++) {
     $test = $node->item($i)->nodeValue;
     $infoStr = $info->item($i)->nodeValue;
     $nameStr = $name->item($i)->nodeValue;
-
     $statement = $pdo->prepare("INSERT INTO camera (model,price,info) VALUES (?,?,?)");
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $statement->execute(array($test,$infoStr ,$nameStr));
         echo "Saved ";
     }
+}
+}
+else{
+    echo "Please enter a valid URL";
 }
 
 ?>
