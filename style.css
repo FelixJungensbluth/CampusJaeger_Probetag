@@ -1,0 +1,31 @@
+.center {
+    position: absolute;
+    top:45%;
+    left:37%;
+    text-align: center;
+    }
+
+
+  .button{
+    position: absolute;
+    width:200px;
+    top: 130%;
+    left: 30%;
+    height:50px;
+    font-size:20pt;
+  }
+
+  .button2{
+    position: absolute;
+    width:200px;
+    top: 60%;
+    left: 46%;
+    height:50px;
+    font-size:20pt;
+  }
+
+  .text{
+    width:500px;
+    height:50px;
+    font-size:20pt;
+  }
