@@ -27,7 +27,6 @@ function startsWith ($string, $startString)
     return (substr($string, 0, $len) === $startString); 
 } 
   
-// Main function 
 if (startsWith($url, "https://")) {
 for ($i=0;$i<1;$i++) {
     $test = $node->item($i)->nodeValue;
